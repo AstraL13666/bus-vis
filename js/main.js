@@ -438,5 +438,4 @@ window.addEventListener('error', function(e) {
 });
 
 // Console message
-console.log('%cВладимир - Системный администратор', 'color: #2563eb; font-size: 20px; font-weight: bold;');
-console.log('%cСайт-визитка создан с любовью к деталям', 'color: #9ca3af; font-size: 14px;');
+console.log('%cBusiness Card Website', 'color: #2563eb; font-size: 20px; font-weight: bold;');

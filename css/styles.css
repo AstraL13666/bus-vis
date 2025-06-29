@@ -302,13 +302,6 @@ section {
     background: var(--bg-secondary);
 }
 
-.about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
 .about-text h3 {
     font-size: 1.8rem;
     color: var(--primary-color);
