@@ -16,12 +16,8 @@
             <div class="nav-logo">
                 <span class="logo-text">Business Card Website</span>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Главная</a>
-                <a href="#about" class="nav-link">О себе</a>
-                <a href="#skills" class="nav-link">Навыки</a>
-                <a href="#education" class="nav-link">Образование</a>
-                <a href="#contact" class="nav-link">Контакты</a>
+            <div class="nav-toggle-theme" id="nav-toggle-theme">
+                <i class="fas fa-moon" id="theme-icon"></i>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
@@ -73,27 +69,27 @@
                 <div class="about-text">
                     <h3>Ответственность</h3>
                     <p class="about-description">
-                        Беру на себя обязательства выполнять их в срок, а также отвечать за свои действия, поступки и решения
+                        Я принимаю на себя обязательство своевременно выполнять поставленные задачи и нести полную ответственность за свои действия, решения и их последствия
                     </p>
                     <h3>Инициативность</h3>
                     <p class="about-description">
-                        Предлагаю новые идеи, начинаю проекты без необходимости внешнего побуждения, для оптимизации рабочих процессов
+                        Я активно продумавыю инновационные идеи и инициирую проекты, стремясь к оптимизации рабочих процессов направленных на улучшение рабочих процессов
                     </p>
                     <h3>Коммуникабельность</h3>
                     <p class="about-description">
-                        Консультируюсь с коллегами, клиентами и руководством, с целью выявления проблем и возможными вариантами их решения
+                        Я привлекаю коллег, клиентов и руководство к обсуждению, чтобы совместно выявлять проблемы и находить инновационные решения, способствующие прогрессу
                     </p>
                     <h3>Целеустремленность</h3>
                     <p class="about-description">
-                        Ставлю четкие цели и добиваюсь их, несмотря на препятствия и трудности
+                        Моя стратегия включает в себя постановку четких целей и неуклонное движение к ним, несмотря на все возникающие вызовы и сложности
                     </p>
                     <h3>Внимание к деталям</h3>
                     <p class="about-description">
-                        Учитываю мелкие, но важные аспекты в работе, что способствует высокому профиту
+                        Я сосредотачиваюсь не только на крупных, но и на мелких деталях, что позволяет не только улучшить качество выполняемых задач, но быстро добиться желаемой цели
                     </p>
                     <h3>Профессионализм</h3>
                     <p class="about-description">
-                        Независимо от количества перечисленных качеств, именно профессионализм служит их интегратором, и я постоянно стремлюсь поддерживать высокий уровень профессионализма
+                        Независимо от количества перечисленных качеств, именно профессионализм служит их интегратором и я постоянно стремлюсь поддерживать его высокий уровень
                     </p>
                 </div>
             </div>
@@ -181,19 +177,19 @@
                             <div class="skill-item">
                                 <div class="skill-info">
                                     <span class="skill-name">TCP/IP</span>
-                                    <span class="skill-percentage">55%</span>
+                                    <span class="skill-percentage">9%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="55"></div>
+                                    <div class="skill-progress" data-width="9"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
                                 <div class="skill-info">
                                     <span class="skill-name">DNS/DHCP</span>
-                                    <span class="skill-percentage">30%</span>
+                                    <span class="skill-percentage">3%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="30"></div>
+                                    <div class="skill-progress" data-width="3"></div>
                                 </div>
                             </div>
                         </div>
@@ -320,6 +316,45 @@
                         </div>
                     </div>
                 </div>
+
+            <!-- Новый блок с карточками -->
+                <div class="education-gallery">
+                    <div class="gallery-item">
+                        <div class="gallery-img-container">
+                            <img src="images/edu-cert-1.png" alt="Основы Python ч. 1">
+                            <h3 class="gallery-title">Основы Python ч. 1</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-img-container">
+                            <img src="images/edu-cert-2.png" alt="Основы Python ч. 2">
+                            <h3 class="gallery-title">Основы Python ч. 2</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-img-container">
+                            <img src="images/edu-cert-adv.png" alt="Advanced">
+                            <h3 class="gallery-title">Advanced</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-img-container">
+                            <img src="images/edu-cert-django.png" alt="Django">
+                            <h3 class="gallery-title">Django</h3>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="gallery-img-container">
+                            <img src="images/edu-cert-sql.png" alt="SQL">
+                            <h3 class="gallery-title">SQL</h3>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -345,7 +380,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Email</h4>
-                                <a href="mailto:vlad13kotov@gmail.com">vlad13kotov@gmail.com</a>
+                                <p>vlad13kotov@gmail.com</p>
                             </div>
                         </div>
 
@@ -385,9 +420,6 @@
                     <p>И да, этот сайт я сделал сам. Могут быть косяки (-_-' )</p>
                 </div>
                 <div class="footer-social">
-                    <a href="mailto:vlad13kotov@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
                     <a href="https://t.me/vlad_prin" class="social-link">
                         <i class="fa-solid fa-paper-plane"></i>
                     </a>
@@ -398,6 +430,34 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const toggleThemeButton = document.getElementById('nav-toggle-theme');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.add('light-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            themeIcon.style.color = 'var(--theme-icon-color)';
+        }
+
+        toggleThemeButton.addEventListener('click', () => {
+            htmlElement.classList.toggle('light-theme');
+            if (htmlElement.classList.contains('light-theme')) {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeIcon.style.color = 'var(--theme-icon-color)';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                themeIcon.style.color = 'var(--theme-icon-color)';
+            }
+        });
+    </script>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.js"></script>
 

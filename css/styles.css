@@ -35,7 +35,74 @@ body {
     --shadow-heavy: rgba(37, 99, 235, 0.3);
     --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
     --gradient-secondary: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    --navbar-bg: rgba(10, 10, 10, 0.95);
+    --theme-icon-color: #ffffff;
 }
+
+/* Light theme */
+:root.light-theme {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --text-primary: #000000;
+    --text-secondary: #4b5563;
+    --text-muted: #9ca3af;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-card: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --shadow-heavy: rgba(0, 0, 0, 0.3);
+    --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    --gradient-secondary: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    --navbar-bg: rgba(255, 255, 255, 0.9);
+    --theme-icon-color: #000000;
+}
+
+body.light-theme {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+.hero.light-theme {
+    background: var(--bg-primary);
+}
+
+.hero-title.light-theme .name {
+    color: var(--text-primary);
+}
+
+.hero-title.light-theme .profession {
+    color: var(--primary-color);
+}
+
+.hero-subtitle.light-theme {
+    color: var(--text-secondary);
+}
+
+.about.light-theme {
+    background: var(--bg-secondary);
+}
+
+.skills.light-theme {
+    background: var(--bg-primary);
+}
+
+.education.light-theme {
+    background: var(--bg-secondary);
+}
+
+.contact.light-theme {
+    background: var(--bg-primary);
+}
+
+.footer.light-theme {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
 
 /* Container */
 .container {
@@ -49,7 +116,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.95);
+    background: var(--navbar-bg);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
@@ -57,8 +124,8 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 10, 0.98);
-    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+    background: rgba(127, 127, 127, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .nav-container {
@@ -78,38 +145,6 @@ body {
     text-decoration: none;
 }
 
-.nav-menu {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--primary-color);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -122,6 +157,17 @@ body {
     background: var(--text-primary);
     margin: 3px 0;
     transition: 0.3s;
+}
+
+.nav-toggle-theme {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--theme-icon-color);
+    transition: color 0.3s ease;
 }
 
 /* Hero Section */
@@ -547,6 +593,59 @@ section {
     line-height: 1.6;
 }
 
+.education-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 171px);
+    gap: 10px;
+    margin: 30px auto 0;
+    justify-content: center;
+}
+
+/* Card Container */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); 
+}
+
+/* Image Container */
+.gallery-img-container {
+    position: relative;
+    width: 171px;  
+    height: 230px; 
+    overflow: hidden;
+}
+
+.gallery-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+/* Header Styles */
+.gallery-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-title {
+    opacity: 0;
+}
+
 /* Contact Section */
 .contact {
     background: var(--bg-primary);
@@ -619,66 +718,6 @@ section {
 
 .contact-details a:hover {
     color: var(--primary-color);
-}
-
-/* Form */
-.form {
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    background: var(--bg-secondary);
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
-    color: var(--text-primary);
-    font-size: 1rem;
-    font-family: inherit;
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px var(--shadow-light);
-}
-
-.form-group label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: var(--text-muted);
-    font-size: 1rem;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus + label,
-.form-group input:valid + label,
-.form-group textarea:focus + label,
-.form-group textarea:valid + label {
-    top: -0.5rem;
-    left: 0.5rem;
-    font-size: 0.8rem;
-    color: var(--primary-color);
-    background: var(--bg-card);
-    padding: 0 0.5rem;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
 }
 
 /* Footer */
@@ -764,6 +803,12 @@ section {
 }
 
 /* Responsive Design */
+@media (min-width: 481px) and (max-width: 768px) {
+    .education-gallery {
+        grid-template-columns: repeat(2, 141px);
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -797,6 +842,12 @@ section {
     .nav-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .nav-toggle-theme {
+        position: absolute;
+        right: 60px;
+        top: 15px;
+    }Я
 
     .hero-title .name {
         font-size: 2.5rem;
@@ -886,6 +937,11 @@ section {
 
     .education-card {
         padding: 1.5rem;
+    }
+
+    .education-gallery {
+        grid-template-columns: 1fr;
+        max-width: 141px;
     }
 
     .form {
