@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Сайт визитка">
     <title>Владимир - Всем привет!</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,11 +18,6 @@
             </div>
             <div class="nav-toggle-theme" id="nav-toggle-theme">
                 <i class="fas fa-moon" id="theme-icon"></i>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
             </div>
         </div>
     </nav>
@@ -317,7 +312,7 @@
                     </div>
                 </div>
 
-            <!-- Новый блок с карточками -->
+            <!-- Education Card-Section -->
                 <div class="education-gallery">
                     <div class="gallery-item">
                         <div class="gallery-img-container">
@@ -356,6 +351,55 @@
 
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="workexp" class="workexp">
+        <div class="section-header">
+            <h2 class="section-title">Опыт работы</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="workexp-container">
+            <div class="workexp-card">
+                <div class="workexp-icon">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+                <div class="workexp-info">
+                    <h3>ПК - инженер</h3>
+                    <p class="workexp-degree">4 месяца</p>
+                    <p class="workexp-description">
+                        Диагностика, ремонт и замена комплектующих. Настройка, обновление и оптимизация ОС
+                    </p>
+                </div>
+            </div>
+
+            <div class="workexp-card">
+                <div class="workexp-icon">
+                    <i class="fa-solid fa-print"></i>
+                </div>
+                <div class="workexp-info">
+                    <h3>МФУ - инженер</h3>
+                    <p class="workexp-degree">6,5 месяцев</p>
+                    <p class="workexp-description">
+                        Диагностика, ремонт и замена комплектующих различной сложности<br>МФУ-устройств
+                    </p>
+                </div>
+            </div>
+
+            <div class="workexp-card">
+                <div class="workexp-icon">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div class="workexp-info">
+                    <h3>Freelance</h3>
+                    <p class="workexp-degree">sometimes</p>
+                    <p class="workexp-description">
+                        Консультация, обучение и создание различных проектов.<br>Боты на Python, cайты, в том числе и на Tilda. Фото-Видео-редактирование
+                    </p>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
@@ -455,6 +499,16 @@
                 themeIcon.classList.remove('fa-sun');
                 themeIcon.classList.add('fa-moon');
                 themeIcon.style.color = 'var(--theme-icon-color)';
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Автоматический скролл к началу галереи при загрузке
+            const gallery = document.getElementById('education-gallery');
+            if (gallery) {
+                gallery.scrollLeft = 0;
             }
         });
     </script>
