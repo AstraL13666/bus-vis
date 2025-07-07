@@ -710,6 +710,7 @@ section {
 }
 
 .contact-details a,
+.contact-details p,
 .contact-details span {
     color: var(--text-secondary);
     text-decoration: none;
